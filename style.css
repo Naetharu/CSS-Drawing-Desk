@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #c0bda5;
+  --beige: #fce6d9;
+  --pink: #ff99af;
+  --purple: #ac90e0;
+  --brown: #7c5d4b;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* //// DESK //// */
+
+#desk {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background-color: var(--brown);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#desk-gap-top {
+  position: absolute;
+  width: 490px;
+  height: 40px;
+  background-color: var(--beige);
+  margin: 5px 5px 0 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#desk-gap-top div {
+  height: 30px;
+  width: 150px;
+  background-color: var(--brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#desk-gap-bottom {
+  position: absolute;
+  width: 450px;
+  height: 240px;
+  background-color: white;
+  margin: 60px 5px 0 5px;
+}
+
+#carpet {
+  position: absolute;
+  width: 700px;
+  height: 6px;
+  background-color: var(--green);
+  bottom: -5px;
+}
+
+#bin {
+  position: absolute;
+  border-top: 90px solid rgb(209, 203, 203);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  height: 0;
+  width: 70px;
+  bottom: 0px;
+  right: 520px;
+}
+
+#bin div {
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(158, 158, 158);
+  bottom: 85px;
+  left: -7px;
+  border-radius: 10px;
+}
+
+#monitor {
+  height: 160px;
+  width: 240px;
+  background-color: grey;
+  position: absolute;
+  top: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#monitor-stand {
+  height: 40px;
+  width: 100px;
+  background-color: transparent;
+  border-left: 4px solid grey;
+  border-right: 4px solid grey;
+  border-bottom: 7px solid grey;
+  position: absolute;
+  top: -40px;
+}
+
+#mouse {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: darkgrey;
+  border-radius: 50% 50% 48% 52% / 26% 26% 74% 74%;
+  top: -18px;
+  right: 140px;
+  z-index: -1;
+}
+
+#keyboard {
+  position: absolute;
+  width: 160px;
+  height: 22px;
+  background-color: darkgrey;
+  top: -22px;
+  right: 180px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1px;
+  padding: 3px;
+}
+
+#keyboard div {
+  min-width: 4px;
+  height: 3px;
+  background-color: rgb(95, 95, 95);
+}
+
+#spacebar {
+  grid-column: 4/18;
+  height: 2px;
+  background-color: rgb(124, 21, 21);
+}
+
+#computer {
+  height: 200px;
+  width: 80px;
+  background-color: darkgrey;
+  position: absolute;
+  top: -200px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+}
+
+#top-buttons {
+  width: 70px;
+  height: 20px;
+  background-color: grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#top-buttons div {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(159, 223, 130);
+  border-radius: 50%;
+}
+
+#computer-mesh {
+  width: 70px;
+  height: 148px;
+  margin-top: 5px;
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent 0,
+      transparent 25%,
+      rgb(180, 200, 223) 0,
+      rgb(158, 168, 177) 50%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 25%,
+      rgb(114, 107, 106) 0,
+      rgb(117, 114, 113) 50%
+    ),
+    repeating-linear-gradient(
+      transparent 0,
+      transparent 25%,
+      rgb(29, 29, 28) 0,
+      rgb(211, 210, 207) 50%
+    ),
+    white;
+  background-blend-mode: multiply;
+  background-size: 30px 30px;
+}
+
+#screen {
+  background: linear-gradient(rgba(75, 115, 141, 0.8), rgba(40, 55, 65, 0.8));
+  width: 96%;
+  height: 96%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+}
+
+#tool-bar {
+  position: absolute;
+  width: 230px;
+  height: 10px;
+  background-color: rgb(54, 53, 54);
+  bottom: 4px;
+  left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+
+#start-button {
+  height: 8px;
+  width: 8px;
+  background-color: rgb(14, 103, 245);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-button div {
+  height: 4px;
+  width: 4px;
+  background-color: rgb(163, 190, 235);
+  border-radius: 2px;
+}
+
+#tool-bar-icons {
+  height: 6px;
+  width: 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#tool-bar-icons div {
+  height: 4px;
+  width: 4px;
+  background-color: rgb(132, 133, 134);
+  border-radius: 2px;
+}
+
+#tray {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 7px;
+  color: white;
+}
+
+#mug {
+  height: 40px;
+  width: 36px;
+  background-color: #ddd;
+  position: absolute;
+  left: 70px;
+  top: -40px;
+  z-index: 2;
+}
+
+#mug-handle {
+  height: 30px;
+  width: 26px;
+  background-color: #ddd;
+  position: absolute;
+  left: -20px;
+  top: 4px;
+  border-radius: 100% 0% 54% 46% / 27% 51% 49% 73%;
+  z-index: -1;
+}
+
+#mug-handle-inner {
+  height: 20px;
+  width: 16px;
+  background-color: white;
+  position: absolute;
+  left: -16px;
+  top: 8px;
+  border-radius: 100% 0% 54% 46% / 27% 51% 49% 73%;
+  z-index: -1;
+}
